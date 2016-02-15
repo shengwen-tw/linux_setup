@@ -14,7 +14,7 @@ sudo apt-get install numix-icon-theme-circle #Circular dock
 sudo apt-get install elementary-tweaks #Elementary os tweeks tool
 sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 sudo apt-get install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
-sudo apt-get install vim git tig gnome-terminal gedit nautilus pv bittorrent kicad
+sudo apt-get install vim git tig gnome-terminal gedit nautilus pv bittorrent kicad meld
 
 #Gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
 wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && sudo bash ./one-dark.sh
