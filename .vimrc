@@ -59,5 +59,12 @@ set t_Co=256
 let g:Powerline_colorscheme='solarized256'
 
 "YouCompleteMe
-"let g:ycm_global_ycm_extra_conf='directory/to/ycm_extra_conf.py' 
+"let g:ycm_global_ycm_extra_conf='directory/to/ycm_extra_conf.py'
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
+let g:clang_complete_auto = 1
+let g:clang_use_library = 1
+let g:clang_debug = 1
+let g:clang_library_path = '/usr/lib/'
 
+set smarttab
+set paste
