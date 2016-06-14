@@ -12,14 +12,19 @@ sudo apt-get update
 #install apt
 sudo apt-get install numix-icon-theme-circle #Circular dock
 sudo apt-get install elementary-tweaks #Elementary os tweeks tool
-sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 sudo apt-get install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
-sudo apt-get install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip
+sudo apt-get install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen
+
+#sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 
 #gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
-wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh
+sudo chown -R $USER ~/.gconf/apps/
+sudo chown -R $USER ~/.config/dconf
+chmod -R u+w ~/.gconf/apps/
+chmod -R u+w ~/.config/dconf
 sudo chmod -R 777 ./one_dark.sh
-./one-dark.sh
+bash ./one-dark.sh
+sudo bash ./one-dark.sh
 
 #Set Gnome terminator as default [http://elementaryos.stackexchange.com/questions/1344/how-can-i-change-the-default-terminal-app]
 sudo update-alternatives --set x-terminal-emulator /usr/bin/gnome-terminal.wrapper
