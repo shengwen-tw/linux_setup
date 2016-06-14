@@ -7,6 +7,8 @@ sudo add-apt-repository ppa:numix/ppa
 sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
 sudo add-apt-repository ppa:fcitx-team
 sudo add-apt-repository --yes ppa:js-reynaud/kicad-4
+sudo add-apt-repository 'deb http://archive.canonical.com/ubuntu trusty partner'
+sudo add-apt-repository 'deb http://archive.canonical.com/ubuntu trusty partner'
 sudo apt-get update
 
 #install apt
