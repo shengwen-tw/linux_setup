@@ -15,7 +15,7 @@ sudo apt-get update
 sudo apt-get install numix-icon-theme-circle #Circular dock
 sudo apt-get install elementary-tweaks #Elementary os tweeks tool
 sudo apt-get install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
-sudo apt-get install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen xflr5
+sudo apt-get install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen xflr5 nmap
 
 #sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 
