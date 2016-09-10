@@ -13,18 +13,18 @@ sudo add-apt-repository 'deb http://archive.canonical.com/ubuntu xenial partner'
 sudo dpkg --add-architecture i386
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt update
+sudo apt dist-upgrade
 
 #install apt
-sudo apt-get install numix-icon-theme-circle #Circular dock
-sudo apt-get install elementary-tweaks #Elementary os tweeks tool
-sudo apt-get install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
-sudo apt-get install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen xflr5 nmap
-sudo apt-get install adobe-flashplugin skype winusb gparted python3-pip
-sudo apt-get install gnuplot-x11 gnuplot google-chrome-stable freecad
+sudo apt install numix-icon-theme-circle #Circular dock
+sudo apt install elementary-tweaks #Elementary os tweeks tool
+sudo apt install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
+sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen xflr5 nmap
+sudo apt install adobe-flashplugin skype winusb gparted python3-pip
+sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop
 
-#sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
+#sudo apt install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 
 #gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
 sudo chown -R $USER ~/.gconf/apps/
