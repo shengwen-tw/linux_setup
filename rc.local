@@ -10,7 +10,6 @@
 # bits.
 #
 # By default this script does nothing.
-echo '0' > /sys/devices/platform/thinkpad_acpi/leds/tpacpi\:\:kbd_backlight/brightness
 
 sudo powertop --auto-tune
 
