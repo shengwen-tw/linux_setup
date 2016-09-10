@@ -8,17 +8,21 @@ sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
 sudo add-apt-repository ppa:fcitx-team
 sudo add-apt-repository --yes ppa:js-reynaud/kicad-4
 sudo add-apt-repository ppa:colingille/freshlight
-sudo add-apt-repository 'deb http://archive.canonical.com/ubuntu trusty partner'
+sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
+sudo add-apt-repository 'deb http://archive.canonical.com/ubuntu xenial partner'
 sudo dpkg --add-architecture i386
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo apt-get update
+sudo apt-get dist-upgrade
 
 #install apt
 sudo apt-get install numix-icon-theme-circle #Circular dock
 sudo apt-get install elementary-tweaks #Elementary os tweeks tool
 sudo apt-get install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
 sudo apt-get install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen xflr5 nmap
-sudo apt-get install adobe-flashplugin skype winusb
-sudo apt-get install gnuplot-x11 gnuplot
+sudo apt-get install adobe-flashplugin skype winusb gparted python3-pip
+sudo apt-get install gnuplot-x11 gnuplot google-chrome-stable freecad
 
 #sudo apt-get install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 
@@ -41,5 +45,7 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp ./.vimrc ~/.vimrc
 vim +PluginInstall +qall
 
+#Copy rc.local
+sudo cp ./rc.local /etc/
 #git editor
 git config --global core.editor vim
