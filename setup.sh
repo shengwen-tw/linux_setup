@@ -5,7 +5,7 @@
 #add apt repo
 sudo add-apt-repository ppa:numix/ppa
 sudo add-apt-repository ppa:philip.scott/elementary-tweaks
-sudo add-apt-repository ppa:fcitx-team
+sudo add-apt-repository ppa:fcitx-team/nightly
 sudo add-apt-repository --yes ppa:js-reynaud/kicad-4
 sudo add-apt-repository ppa:colingille/freshlight
 sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
@@ -20,7 +20,7 @@ sudo apt dist-upgrade
 sudo apt install numix-icon-theme-circle #Circular dock
 sudo apt install elementary-tweaks #Elementary os tweeks tool
 sudo apt install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
-sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen screen xflr5 nmap
+sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen xflr5 nmap
 sudo apt install adobe-flashplugin skype winusb gparted python3-pip
 sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop
 
@@ -50,7 +50,9 @@ sudo cp ./rc.local /etc/
 #git editor
 git config --global core.editor vim
 
-cp -r .fonts ~/.fonts
+wget https://noto-website.storage.googleapis.com/pkgs/Noto-hinted.zip
+unzip Noto-hinted.zip
+mv  Noto-hinted ~/.fonts
 fc-cache -fv
 
 #Set shortkeys
@@ -58,3 +60,6 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Shif
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Shift>Right']"
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Shift>Up']"
 gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Shift>Down']"
+
+sudo apt remove epiphany-browser
+sudo apt remove pantheon-files
