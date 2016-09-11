@@ -4,7 +4,7 @@
 
 #add apt repo
 sudo add-apt-repository ppa:numix/ppa
-sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
+sudo add-apt-repository ppa:philip.scott/elementary-tweaks
 sudo add-apt-repository ppa:fcitx-team
 sudo add-apt-repository --yes ppa:js-reynaud/kicad-4
 sudo add-apt-repository ppa:colingille/freshlight
@@ -49,3 +49,12 @@ vim +PluginInstall +qall
 sudo cp ./rc.local /etc/
 #git editor
 git config --global core.editor vim
+
+cp -r .fonts ~/.fonts
+fc-cache -fv
+
+#Set shortkeys
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Shift>Left']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Shift>Right']"
+gsettings set org.gnome.desktop.wm.keybindings maximize "['<Shift>Up']"
+gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Shift>Down']"
