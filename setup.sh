@@ -28,6 +28,9 @@ sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad
 sudo apt install adobe-flashplugin skype winusb gparted python3-pip
 sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop
 
+#MS Font
+sudo apt install ttf-linux-libertine ttf-mscorefonts-installer msttcorefonts
+
 #sudo apt install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
 
 #gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
