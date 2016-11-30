@@ -19,7 +19,11 @@ sudo apt dist-upgrade
 #install apt
 sudo apt install numix-icon-theme-circle #Circular dock
 sudo apt install elementary-tweaks #Elementary os tweeks tool
-sudo apt install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix-chewing
+
+#Chinese input method
+#sudo apt install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix
+sudo apt install im-config scim scim-chewing #scim
+
 sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen xflr5 nmap
 sudo apt install adobe-flashplugin skype winusb gparted python3-pip
 sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop
