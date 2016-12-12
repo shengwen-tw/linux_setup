@@ -72,3 +72,5 @@ sudo apt remove epiphany-browser
 sudo apt remove pantheon-files
 
 sudo cp 10-trackpoint.rules /etc/udev/rules.d/10-trackpoint.rules
+
+sudo powertop --calibrate
