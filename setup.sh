@@ -26,7 +26,7 @@ sudo apt install im-config scim scim-chewing #scim
 
 sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen xflr5 nmap
 sudo apt install adobe-flashplugin skype winusb gparted python3-pip texlive-full texlive-science texlive-latex-base
-sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop grub-customizer
+sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop grub-customizer llvm clang lldb libclang-dev
 
 #MS Font
 sudo apt install ttf-linux-libertine ttf-mscorefonts-installer msttcorefonts
@@ -51,6 +51,10 @@ gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp ./.vimrc ~/.vimrc
 vim +PluginInstall +qall
+
+#http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
 
 #Copy rc.local
 sudo cp ./rc.local /etc/
