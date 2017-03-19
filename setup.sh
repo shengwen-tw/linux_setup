@@ -25,7 +25,7 @@ sudo apt install elementary-tweaks #Elementary os tweeks tool
 sudo apt install im-config scim scim-chewing #scim
 
 sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen xflr5 nmap
-sudo apt install adobe-flashplugin skype winusb gparted python3-pip texlive-full texlive-science texlive-latex-base
+sudo apt install adobe-flashplugin skype winusb gparted python3-pip texlive-full texlive-science texlive-latex-base astyle
 sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop grub-customizer llvm clang lldb libclang-dev
 
 #MS Font
