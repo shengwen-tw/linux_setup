@@ -1,0 +1,3 @@
+#disable trackpad
+xinput list
+xinput --disable id
