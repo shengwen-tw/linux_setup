@@ -10,10 +10,10 @@ export ROSLAUNCH_SSH_UNKNOWN=1
 PATH=$PATH:~/workspace/tools/stlink:~/workspace/tools/eaglecad/bin:~/workspace/tools/gcc-arm-none-eabi-5_4-2016q3/bin:~/workspace/tools/stm32_cubemx
 export PATH
 
-export LD_LIBRARY_PATH=$PATH:/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 alias dd="dd status=progress"
 
 #disable trackpad
-xinput list
+#xinput list
 xinput --disable id
