@@ -52,6 +52,7 @@ gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp ./.vimrc ~/.vimrc
 vim +PluginInstall +qall
+cp ./.ycm_extra_conf.py ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
 
 #http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
 cd ~/.vim/bundle/YouCompleteMe
