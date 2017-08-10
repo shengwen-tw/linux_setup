@@ -64,8 +64,14 @@ let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cp
 let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1 }
 let g:clang_complete_auto = 1
 let g:clang_use_library = 1
-let g:clang_debug = 1
+let g:clang_debug = 0
 let g:clang_library_path = '/usr/lib/'
+let g:ycm_show_diagnostics_ui = 0
+set completeopt-=preview
 
 set smarttab
 set paste
+
+autocmd Filetype tex setl updatetime=1
+
+nmap <F12> :LLPStartPreview<cr>
