@@ -1,61 +1,35 @@
-#Setup script for Elementary OS
+#Setup script for Elementary OS 5.0
 #Author: Shengwen Cheng
 #Email: shengwen1997.tw@gmail.com
+
+sudo apt install -y software-properties-common
 
 #add apt repo
 sudo add-apt-repository ppa:numix/ppa
 sudo add-apt-repository ppa:philip.scott/elementary-tweaks
-sudo add-apt-repository ppa:fcitx-team/nightly
-sudo add-apt-repository --yes ppa:js-reynaud/kicad-4
-sudo add-apt-repository ppa:colingille/freshlight
-sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
-sudo add-apt-repository 'deb http://archive.canonical.com/ubuntu xenial partner'
-sudo dpkg --add-architecture i386
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list'
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo apt update
 sudo apt dist-upgrade
 
 #install apt
-sudo apt install numix-icon-theme-circle #Circular dock
-sudo apt install elementary-tweaks #Elementary os tweeks tool
+sudo apt install numix-icon-theme-circle elementary-tweaks #tweek elementary os
+sudo cp ./index.theme /usr/share/icons/Numix-Circle/index.theme
 
-#Chinese input method
-#sudo apt install im-config fcitx fcitx-config-gtk fcitx-chewing #fctix
-sudo apt install im-config scim scim-chewing #scim
+sudo apt install vim git tig gedit nautilus pv transmission meld exuberant-ctags cloc kolourpaint4 python-pip screen xflr5 \
+     nmap adobe-flashplugin skype winusb gparted python3-pip texlive-full texlive-science texlive-latex-base astyle gnuplot-x11 gnuplot \
+     powertop grub-customizer llvm clang lldb libclang-dev eog
 
-sudo apt install vim git tig gnome-terminal gedit nautilus pv transmission kicad meld exuberant-ctags cloc kolourpaint4 python-pip screen xflr5 nmap
-sudo apt install adobe-flashplugin skype winusb gparted python3-pip texlive-full texlive-science texlive-latex-base astyle
-sudo apt install gnuplot-x11 gnuplot google-chrome-stable freecad powertop grub-customizer llvm clang lldb libclang-dev eog
-sudo apt install scim-tables-ja
+sudo apt install ttf-linux-libertine ttf-mscorefonts-installer msttcorefonts #MS fonts
 
-#MS Font
-sudo apt install ttf-linux-libertine ttf-mscorefonts-installer msttcorefonts
-
-#sudo apt install bumblebee bumblebee-nvidia primus linux-headers-generic #nvidia third party hardware driver
-
-#gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
-sudo chown -R $USER ~/.gconf/apps/
-sudo chown -R $USER ~/.config/dconf
-chmod -R u+w ~/.gconf/apps/
-chmod -R u+w ~/.config/dconf
-sudo chmod -R 777 ./one_dark.sh
-bash ./one-dark.sh
-sudo bash ./one-dark.sh
-
-#Set Gnome terminator as default [http://elementaryos.stackexchange.com/questions/1344/how-can-i-change-the-default-terminal-app]
-sudo update-alternatives --set x-terminal-emulator /usr/bin/gnome-terminal.wrapper
-gsettings set org.gnome.desktop.default-applications.terminal exec gnome-terminal
-gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
+#Intsall Google Chrome
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 #vim
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp ./.vimrc ~/.vimrc
 vim +PluginInstall +qall
 cp ./.ycm_extra_conf.py ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
-
-#http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe #http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
 ./install.sh --clang-completer
 
 #Copy rc.local
@@ -80,3 +54,18 @@ sudo apt remove pantheon-files
 sudo cp 10-trackpoint.rules /etc/udev/rules.d/10-trackpoint.rules
 
 sudo powertop --calibrate #Should calibrate at battery mode
+
+#gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
+#sudo chown -R $USER ~/.gconf/apps/
+#sudo chown -R $USER ~/.config/dconf
+#chmod -R u+w ~/.gconf/apps/
+#chmod -R u+w ~/.config/dconf
+#sudo chmod -R 777 ./one_dark.sh
+#bash ./one-dark.sh
+#sudo bash ./one-dark.sh
+
+#Set Gnome terminator as default [http://elementaryos.stackexchange.com/questions/1344/how-can-i-change-the-default-terminal-app]
+#sudo apt install gnome-terminal
+#sudo update-alternatives --set x-terminal-emulator /usr/bin/gnome-terminal.wrapper
+#gsettings set org.gnome.desktop.default-applications.terminal exec gnome-terminal
+#gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
