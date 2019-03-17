@@ -1,0 +1,27 @@
+Step 1: Connect the bluetooth 4.0 device on Linux
+==================================================================================================================================
+
+Step 2: Connect the bluetooth 4.0 device on Windows and export the keys
+==================================================================================================================================
+psexec -s -i regedit.exe from windows
+1. Download: http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx.
+2. type "psexec -s -i regedit.exe" in cmd.exe with administrator privileges
+3. Export LOCAL_MACHINE\CurrentControlSet\services\BTHPORT\Parameters\Keys\{DEVICE}/{ADDRESS}
+
+Step 3: Edit bluetooth profile on Linux
+==================================================================================================================================
+1. Modify /var/lib/bluetooth/{DEVICE}/{ADDRESS}/info with root
+   (If $DEVICE or $ADDRESS is different, you have to move the directory. 
+   For example, /var/lib/bluetooth/00:1B:DC:0E:34:54/C4:BE:84:43:7B:D0/info.)
+2. Copy LTK in Windows to Key in LongTermKey in Linux with capital characters and no space
+3. Reverse ERand in Windows and convert the hexadecimal without space to the decimal and paste it to Rand in LongTermKey in Linux.
+   (For exmaple, ERand is 80070be36385dd2b and the reverse is 2bdd8563e30b0780 and the decimal Rand is 3160829177541363584)
+4. Convert the hexadecimal of EDIV in Windows to the decimal and paste it to EDiv in LongTermKey in Linux.
+   It’s no reverse.
+   For example, EDIV is f548 and the decimal EDiv is 62792
+5. Copy IRK in Windows to Key in IdentifyResolvingKey in Linux with capital characters and no space
+6. Copy CSRK in Windows to Key in LocalSignatureKey in Linux with capital characters and no space
+
+Step 4: Reboot
+==================================================================================================================================
+
