@@ -26,9 +26,9 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 #vim
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-cp ./.vimrc ~/.vimrc
+cp ./auto/.vimrc ~/.vimrc
 vim +PluginInstall +qall
-cp ./.ycm_extra_conf.py ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
+cp ./auto/.ycm_extra_conf.py ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
 cd ~/.vim/bundle/YouCompleteMe #http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
 ./install.sh --clang-completer
 
@@ -52,7 +52,7 @@ sudo apt remove pantheon-files
 sudo cp ./auto/10-trackpoint.rules /etc/udev/rules.d/10-trackpoint.rules
 
 sudo powertop --calibrate #Should calibrate at battery mode
-sudo cp .auto//rc.local /etc/ #Copy rc.local (auto start powertop)
+sudo cp ./auto/rc.local /etc/ #Copy rc.local (auto start powertop)
 
 #gnome theme [https://github.com/denysdovhan/one-gnome-terminal]
 #sudo chown -R $USER ~/.gconf/apps/
