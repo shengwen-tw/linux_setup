@@ -75,8 +75,3 @@ set paste
 autocmd Filetype tex setl updatetime=1
 
 nmap <F12> :LLPStartPreview<cr>
-
-set tabstop=4
-set shiftwidth=4    
-set softtabstop=4   
-set expandtab
