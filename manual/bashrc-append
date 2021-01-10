@@ -1,2 +1,1 @@
-alias dd="dd status=progress"
-alias dd_see="alias dd_see="watch -n5 'sudo kill -USR1 $(pgrep ^dd)'"
+alias dd_see="watch -n5 'sudo kill -USR1 $(pgrep ^dd)'"
