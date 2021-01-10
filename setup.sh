@@ -41,3 +41,5 @@ gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Shift>Down']"
 
 #sudo powertop --calibrate #Should calibrate at battery mode
 #sudo cp ./auto/rc.local /etc/ #Copy rc.local (auto start powertop)
+
+timedatectl set-local-rtc 1 --adjust-system-clock
