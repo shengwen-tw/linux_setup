@@ -34,10 +34,12 @@ git config --global core.editor vim
 #fc-cache -fv
 
 #Set shortkeys
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Shift>Left']"
-gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Shift>Right']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['<Shift>Left']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['<Shift>Right']"
 gsettings set org.gnome.desktop.wm.keybindings maximize "['<Shift>Up']"
 gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Shift>Down']"
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Super>q']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>Tab']"
 
 #sudo powertop --calibrate #Should calibrate at battery mode
 #sudo cp ./auto/rc.local /etc/ #Copy rc.local (auto start powertop)
