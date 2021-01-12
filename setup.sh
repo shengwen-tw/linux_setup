@@ -8,7 +8,7 @@ sudo apt install -y software-properties-common
 sudo apt update
 sudo apt dist-upgrade
 
-sudo apt install vim git tig gedit nautilus pv transmission meld exuberant-ctags \
+sudo apt install vim git tig gedit nautilus pv cgdb meld exuberant-ctags \
          cloc kolourpaint4 screen nmap gparted python3-pip \
          texlive-full texlive-science texlive-latex-base astyle gnuplot-x11 gnuplot
          powertop grub-customizer llvm clang lldb libclang-dev eog
