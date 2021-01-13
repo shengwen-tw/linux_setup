@@ -11,7 +11,7 @@ sudo apt dist-upgrade
 sudo apt install vim git tig gedit nautilus pv cgdb meld exuberant-ctags \
          cloc kolourpaint4 screen nmap gparted python3-pip \
          texlive-full texlive-science texlive-latex-base astyle gnuplot-x11 gnuplot
-         powertop grub-customizer llvm clang lldb libclang-dev eog
+         powertop grub-customizer llvm clang lldb libclang-dev eog kazam
 
 #Google Chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
