@@ -1,4 +1,4 @@
-#My setup script for POP!_OS 20.04
+#My setup script for POP!_OS 22.04
 #Author: Shengwen Cheng
 #Email: shengwen1997.tw@gmail.com
 
@@ -9,9 +9,9 @@ sudo apt update
 sudo apt dist-upgrade
 
 sudo apt install vim git tig gedit nautilus pv cgdb meld exuberant-ctags \
-         cloc kolourpaint4 screen nmap gparted python3-pip \
+         cloc kolourpaint screen nmap gparted python3-pip htop \
          texlive-full texlive-science texlive-latex-base astyle gnuplot-x11 gnuplot
-         powertop grub-customizer llvm clang lldb libclang-dev eog kazam
+         powertop grub-customizer llvm clang lldb libclang-dev eog kazam ffmpeg
 
 #Google Chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -40,8 +40,9 @@ gsettings set org.gnome.desktop.wm.keybindings maximize "['<Ctrl>Up']"
 gsettings set org.gnome.desktop.wm.keybindings unmaximize "['<Ctrl>Down']"
 gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Super>q']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>Tab']"
+gsettings set org.gnome.shell.extensions.pop-cosmic overlay-key-action 'WORKSPACES'
 
 #sudo powertop --calibrate #Should calibrate at battery mode
 #sudo cp ./auto/rc.local /etc/ #Copy rc.local (auto start powertop)
 
-timedatectl set-local-rtc 1 --adjust-system-clock
+#timedatectl set-local-rtc 1 --adjust-system-clock
