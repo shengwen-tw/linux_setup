@@ -8,10 +8,9 @@ sudo apt install -y software-properties-common
 sudo apt update
 sudo apt dist-upgrade
 
-sudo apt install vim git tig gedit nautilus pv cgdb meld exuberant-ctags \
-         cloc kolourpaint screen nmap gparted python3-pip htop \
-         texlive-full texlive-science texlive-latex-base astyle gnuplot-x11 gnuplot
-         powertop grub-customizer llvm clang lldb libclang-dev eog kazam ffmpeg
+sudo apt install vim git tig gedit nautilus pv cgdb meld universal-ctags cscope cloc \
+         kolourpaint screen nmap gparted python3-pip htop astyle gnuplot-x11 gnuplot
+         grub-customizer llvm clang lldb libclang-dev eog kazam ffmpeg clang-format
 
 #Google Chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -22,8 +21,8 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cp ./auto/.vimrc ~/.vimrc
 vim +PluginInstall +qall
 cp ./auto/.ycm_extra_conf.py ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py
-cd ~/.vim/bundle/YouCompleteMe #http://howiefh.github.io/2015/05/22/vim-install-youcompleteme-plugin/
-./install.sh --clang-completer
+cd ~/.vim/bundle/YouCompleteMe
+python ./install.py
 
 #git editor
 git config --global core.editor vim

@@ -75,3 +75,8 @@ set paste
 autocmd Filetype tex setl updatetime=1
 
 nmap <F12> :LLPStartPreview<cr>
+
+"ctags
+set cscopetag
+#set tags+=$HOME/...
+
